@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Meat Map`,
-    description: `Interactive maps of meat cuts`,
+    description: `Carte interactive des découpes de viande`,
     author: `@victma`,
   },
   pathPrefix: "/meat-map",
@@ -11,7 +11,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `maps`,
         path: `${__dirname}/src/data`,
       },
     },
@@ -26,7 +25,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/data/images/logo.png`,
       },
     },
     `gatsby-plugin-emotion`,

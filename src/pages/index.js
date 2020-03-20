@@ -8,7 +8,7 @@ import MapContainer from "../components/maps/mapContainer"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Boeuf" />
     <MapContainer
       parts={data.mapsJson.parts}
     />

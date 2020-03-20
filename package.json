@@ -28,7 +28,11 @@
     "prettier": "^1.19.1"
   },
   "keywords": [
-    "meat", "map", "beef", "cuts", "gatsby"
+    "meat",
+    "map",
+    "beef",
+    "cuts",
+    "gatsby"
   ],
   "license": "MIT",
   "scripts": {

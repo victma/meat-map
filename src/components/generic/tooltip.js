@@ -10,8 +10,6 @@ const Container = styled.div({
 const TooltipSpan = styled.span({
   opacity: 0,
   width: 200,
-  backgroundColor: "#393332",
-  color: "white",
   textAlign: "center",
   padding: "0 8px",
   borderRadius: 4,
@@ -34,15 +32,16 @@ const TooltipSpan = styled.span({
     marginLeft: -8,
     borderWidth: 8,
     borderStyle: "solid",
-    borderColor: "transparent transparent black transparent",
   },
 
   '&>div': {
     margin: "8px 0",
   }
 }, props => ({
-  '@media (hover: none)': {
-    opacity: props.visible ? 1 : 0,
+  backgroundColor: props.background,
+  color: props.color,
+  '&::after': {
+    borderColor: `transparent transparent ${props.background} transparent`,
   }
 }))
 
@@ -51,19 +50,14 @@ class Tooltip extends Component {
     visible: false,
   }
 
-  handleClick = () => {
-    this.setState({
-      visible: !this.state.visible,
-    });
-  }
-
   render() {
     return (
-      <Container
-        onClick={this.handleClick}
-      >
+      <Container>
         {this.props.children}
-        <TooltipSpan visible={this.state.visible}>
+        <TooltipSpan
+          background={this.props.background}
+          color={this.props.color}
+        >
           {
             typeof this.props.text === "string"
             ? <div>{this.props.text}</div>

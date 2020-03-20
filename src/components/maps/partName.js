@@ -23,8 +23,8 @@ const HelpMessage = styled.p({
   fontSize: 24,
   padding: 16,
   margin: 0,
-  background: colors.pieceName.background,
-  color: colors.pieceName.text,
+  background: colors.partName.background,
+  color: colors.partName.text,
   [screen.mediaQuery.l]: {
     left: "50%",
     width: 500,
@@ -48,7 +48,7 @@ const Title = styled.h2({
   margin: 0,
   width: "100%",
   padding: "32px 32px 16px",
-  background: colors.pieceName.background,
+  background: colors.partName.background,
   borderRadius: "8px 8px 0 0",
   [screen.mediaQuery.l]: {
     fontSize: 36,
@@ -62,7 +62,7 @@ const Description = styled.div({
   padding: "32px 32px 100%",
   margin: 0,
   textAlign: "center",
-  background: colors.pieceName.background,
+  background: colors.partName.background,
   [screen.mediaQuery.l]: {
     borderRadius: "8px 8px 0 0",
   }
@@ -120,6 +120,8 @@ class PartName extends Component {
                 ? "Pas de doneées"
                 : this.state.nutrition.lipids.text
               }
+              background={colors.partName.text}
+              color={colors.background}
             >
               <Nutrition><span role="img" aria-label="Frites">🍟</span> <span>{this.state.nutrition.lipids.value || "-"} %</span></Nutrition>
             </Tooltip>

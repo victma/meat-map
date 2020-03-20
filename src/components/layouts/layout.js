@@ -1,37 +1,59 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Global, css } from "@emotion/core"
 import "typeface-roboto"
 import "typeface-montserrat"
 
 import Header from "./header"
-import "./layout.css"
+import { colors } from "../constants"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const style = css`
+  html, body, main, #___gatsby {
+    margin: 0;
+    height: 100%;
+  }
+  
+  #gatsby-focus-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    color: ${colors.text};
+    background-color: ${colors.background};
+    font-size: 16px;
+  }
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
-    </>
-  )
-}
+  main {
+    height: 100px;
+    flex-grow: 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    margin: 0px;
+  }
+
+  p {
+    margin: 8px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #393332;
+  }
+`
+
+const Layout = ({ children }) => (
+  <>
+    <Global styles={style} />
+    <Header />
+    <main>{children}</main>
+  </>
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

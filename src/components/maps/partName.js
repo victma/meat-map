@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from "@emotion/styled";
 
+import NutritionValue from "./nutritionValue";
+import Recipes from "./recipes";
+import Attributes from "./attributes";
 import HoverAdpatedSpan from "../generic/hoverAdaptedSpan";
-import Tooltip from "../generic/tooltip";
 
 import { colors, screen } from "../constants";
 
@@ -59,7 +62,7 @@ const Title = styled.h2({
 })
 
 const Description = styled.div({
-  padding: "32px 32px 100%",
+  padding: "16px 32px 100%",
   margin: 0,
   textAlign: "center",
   background: colors.partName.background,
@@ -68,25 +71,14 @@ const Description = styled.div({
   }
 })
 
-const Nutrition = styled.p({
-  fontSize: "1.4rem",
-  
-  '& > :not([role=img])': {
-    borderBottom: "2px dotted #444",
-  }
-})
-
 class PartName extends Component {
   state = { 
     label: "",
     description: "",
-    nutrition: {
-      lipids: {
-        value: null,
-        text: [],
-      },
-    },
-   }
+    nutrition: {},
+    recipes: [],
+    attributes: {},
+   };
 
   // Needed to keep the previous name on animation
   static getDerivedStateFromProps(props, state) {
@@ -98,6 +90,8 @@ class PartName extends Component {
       label: props.name,
       description: props.description,
       nutrition: props.nutrition,
+      recipes: props.recipes,
+      attributes: props.attributes,
     };
   }
 
@@ -114,17 +108,22 @@ class PartName extends Component {
         <MovingContainer show={this.props.name}>
           <Title>{ this.state.label }</Title>
           <Description>
-            <Tooltip
-              text={
-                this.state.nutrition.lipids.text.length === 0
-                ? "Pas de doneées"
-                : this.state.nutrition.lipids.text
-              }
-              background={colors.partName.text}
-              color={colors.background}
-            >
-              <Nutrition><span role="img" aria-label="Frites">🍟</span> <span>{this.state.nutrition.lipids.value || "-"} %</span></Nutrition>
-            </Tooltip>
+            { this.state.nutrition.lipids && 
+              <NutritionValue
+                title={"Lipides"}
+                value={this.state.nutrition.lipids.value}
+                emoji={"🍟"}
+                emojiAria={"Frites"}
+                tooltip={this.state.nutrition.lipids.text.length > 0
+                  ? this.state.nutrition.lipids.text
+                  : "Pas de données"
+                }
+              />
+            }
+            { this.state.recipes.length > 0 &&
+              <Recipes names={this.state.recipes} />
+            }
+            <Attributes attributes={this.state.attributes} />
             <p>{this.state.description}</p>
           </Description>
         </MovingContainer>
@@ -132,5 +131,17 @@ class PartName extends Component {
     );
   }
 }
+
+PartName.propTypes = {
+  name: PropTypes.string,
+  description: PropTypes.string,
+  nutrition: PropTypes.shape({
+    lipids: PropTypes.exact({
+      value: PropTypes.number,
+      text: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
+    })
+  }).isRequired,
+  recipes: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
  
 export default PartName;

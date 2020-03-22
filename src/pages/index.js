@@ -32,6 +32,12 @@ query MyQuery {
           value
         }
       }
+      recipes
+      attributes {
+        gelatin
+        marble
+        lean
+      }
     }
   }
 }

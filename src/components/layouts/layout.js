@@ -1,12 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import { Global, css } from "@emotion/core"
 import "typeface-roboto"
 import "typeface-montserrat"
 
 import Header from "./header"
-import { colors } from "../constants"
+import { colors, fonts } from "../constants"
 
 const style = css`
   html, body, main, #___gatsby {
@@ -24,7 +23,7 @@ const style = css`
     font-family: "Roboto", sans-serif;
     color: ${colors.text};
     background-color: ${colors.background};
-    font-size: 16px;
+    font-size: ${fonts.base};
   }
 
   main {

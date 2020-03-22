@@ -1,5 +1,7 @@
 const lightGrey = "#e7e1df";
 const lightGreen = "#e6ee9c";
+const logoGreen = "#abba20";
+const logoBlue = "#28aaff";
 const deepRed = "#b71c1c";
 const lightBrown = "#bcaaa4";
 const darkBrown = "#393332";
@@ -17,8 +19,21 @@ const colors = {
   partName: {
     text: darkBrown,
     background: lightBrown,
-  }
+    badge: {
+      lean: "#689f38",
+      marble: deepRed,
+      gelatin: logoBlue,
+    },
+  },
 };
+
+const fonts = {
+  base: "16px",
+  partName: {
+    details: "1.2rem",
+    nutrition: "1.2rem",
+  }
+}
 
 const screenSizeL = 900;
 
@@ -31,5 +46,6 @@ const screen = {
 
 export {
   colors,
+  fonts,
   screen,
 }

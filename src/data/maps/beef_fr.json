@@ -11,10 +11,12 @@
       "transform": "translate(-26.786 -106.472)",
       "nutrition": {
         "lipids": {
-          "value": 15.6,
-          "text": ["Grillée : 15,6%", "Bouillie : 3,14%"]
+          "value": 13.8,
+          "text": ["Crue : 13,8%", "Cuite : 15,6%"]
         }
-      }
+      },
+      "recipes": [],
+      "attributes": {}
     },
     {
       "id": 2,
@@ -31,9 +33,11 @@
       "nutrition": {
         "lipids": {
           "value": 5.02,
-          "text": []
+          "text": ["Crue: 5,02%", "Braisée ou bouillie: 8,82%"]
         }
-      }
+      },
+      "recipes": [],
+      "attributes": {}
     },
     {
       "id": 4,
@@ -44,9 +48,11 @@
       "nutrition": {
         "lipids": {
           "value": 5.8,
-          "text": []
+          "text": ["Braisé: 5,8%"]
         }
-      }
+      },
+      "recipes": ["Plats mijotés"],
+      "attributes": {}
     },
     {
       "id": 5,
@@ -54,11 +60,10 @@
       "description": "Description",
       "d": "M142.497 137.678l-4.063-23.435s-8.015 1.517-13.418 3.686c-3.867 1.551-9.355 2.078-9.355 2.078l3.496 19.844s1.609-3.022 3.024-4.347c3.301-3.09 8.082-5.086 12.284-4.157 4.685 1.035 8.032 6.33 8.032 6.33z",
       "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
+      "nutrition": {},
+      "recipes": ["Grillée/poêlée", "Plats mijotés"],
+      "attributes": {
+        "marble": true
       }
     },
     {
@@ -67,12 +72,9 @@
       "description": "Description",
       "d": "M145.899 147.883s-.367-3.657-.945-5.386c-.572-1.71-2.457-4.82-2.457-4.82s-3.347-5.295-8.032-6.33l.85 22.395 9.733 1.606s.594-2.477.804-3.732c.273-1.638.047-3.733.047-3.733z",
       "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
-      }
+      "nutrition": {},
+      "recipes": ["Grillé/poêlé en steak"],
+      "attributes": {}
     },
     {
       "id": 7,
@@ -80,11 +82,10 @@
       "description": "Description",
       "d": "M145.899 147.883l11.056 6.142s-1.747 3.898-2.321 6.79c-.917 4.62-6.169 7.783-6.169 7.783l-5.539 3.727-4.347 2.803 4.076-12.094 2.393-7.686s.594-2.477.804-3.732c.273-1.638.047-3.733.047-3.733h0",
       "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
+      "nutrition": {},
+      "recipes": ["Plats mijotés"],
+      "attributes": {
+        "marble": true
       }
     },
     {
@@ -93,11 +94,10 @@
       "description": "Description",
       "d": "M145.048 155.348l-9.733-1.606s.763 6.569.658 9.894c-.122 3.874-1.603 12.428-1.603 12.428l3.875.2.334-1.136 4.076-12.094 2.393-7.686",
       "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
+      "nutrition": {},
+      "recipes": ["Plats mijotés"],
+      "attributes": {
+        "gelatin": true
       }
     },
     {
@@ -109,8 +109,12 @@
       "nutrition": {
         "lipids": {
           "value": 6.54,
-          "text": []
+          "text": ["Cru : 6,54%", "Braisé ou bouilli : 11,4%"]
         }
+      },
+      "recipes": ["Plats mijotés", "Grillé/poêlé en steak"],
+      "attributes": {
+        "gelatin": true
       }
     },
     {
@@ -119,12 +123,9 @@
       "description": "Description",
       "d": "M135.315 153.742l-11.055-.662s-.257 4.612-.567 6.898c-.34 2.51-1.418 7.465-1.418 7.465s2 2.704 2.835 4.158c.73 1.27 1.89 3.969 1.89 3.969l7.37.494s1.481-8.554 1.603-12.428c.105-3.325-.658-9.894-.658-9.894",
       "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
-      }
+      "nutrition": {},
+      "recipes": ["Plats mijotés"],
+      "attributes": {}
     },
     {
       "id": 11,
@@ -135,21 +136,29 @@
       "nutrition": {
         "lipids": {
           "value": 3.36,
-          "text": []
+          "text": ["Crue : 3,36%", "Grillée/poêlée : 4,11%", "Rôtie/cuite au four : 4,2%"]
         }
+      },
+      "recipes": ["Grillée/poêlée en steak", "Rôtie"],
+      "attributes": {
+        "lean": true
       }
     },
     {
       "id": 12,
-      "name": "Côtes, entrecôtes",
+      "name": "Côtes et entrecôtes",
       "description": "Description",
       "d": "M119.157 139.851l-3.496-19.844s-5.634.58-9.166 1.134c-1.922.302-6.52 0-6.52 0s.89 5.846.945 10.773c.053 4.921-.85 14.74-.85 14.74l16.725-.944c.359-2.075 2.362-5.859 2.362-5.859",
       "transform": "translate(-26.786 -106.472)",
       "nutrition": {
         "lipids": {
-          "value": 17.1,
-          "text": []
+          "value": 7.28,
+          "text": ["Côte crue : 7,28%", "Entrecôte crue : 17,1%", "Entrecôte partie maigre grilée/poêlée : 10,7%"]
         }
+      },
+      "recipes": ["Grillée/poêlée", "Au four/grill/barbecue (côte)"],
+      "attributes": {
+        "marble": true
       }
     },
     {
@@ -161,22 +170,21 @@
       "nutrition": {
         "lipids": {
           "value": 23.7,
-          "text": []
+          "text": ["Cru : 23,7%"]
         }
-      }
+      },
+      "recipes": ["Plats mijotés"],
+      "attributes": {}
     },
     {
       "id": 14,
-      "name": "Tendron, milieu de poitrine",
+      "name": "Tendron et milieu de poitrine",
       "description": "Description",
       "d": "M117.267 157.427l-25.891 2.457-4.046 13.373s2.365.983 4.945-1.67c2.082-2.141 6.127-1.3 8.953-.334 5.665 1.935 9.573 1.488 14.7 1.737 3.785.184 11.072 2.58 11.072 2.58-1.4-3.485-2.787-5.565-4.725-8.127 0 0-4.077-6.4-5.008-10.016",
       "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
-      }
+      "nutrition": {},
+      "recipes": ["Plats mijotés"],
+      "attributes": {}
     },
     {
       "id": 15,
@@ -187,9 +195,11 @@
       "nutrition": {
         "lipids": {
           "value": 6.74,
-          "text": []
+          "text": ["Cru : 6,74%", "Rôti/cuit au four : 8,71%"]
         }
-      }
+      },
+      "recipes": ["Grillé/poêlé", "Rôti"],
+      "attributes": {}
     },
     {
       "id": 16,
@@ -197,12 +207,9 @@
       "description": "Description",
       "d": "M87.33 173.257l4.046-13.373-19.75-1.984-3.496 8.976s7.578.21 11.528 3.119c2.239 1.647 7.672 3.262 7.672 3.262z",
       "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
-      }
+      "nutrition": {},
+      "recipes": ["Plats mijotés"],
+      "attributes": {}
     },
     {
       "id": 17,
@@ -210,12 +217,9 @@
       "description": "Description",
       "d": "M90.903 147.222l.473 12.662-19.75-1.984.945-3.78s4.42-1.59 6.71-3.496c1.849-1.541 4.913-5.292 4.913-5.292z",
       "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
-      }
+      "nutrition": {},
+      "recipes": ["Grillée/poêlée"],
+      "attributes": {}
     },
     {
       "id": 18,
@@ -223,11 +227,10 @@
       "description": "Description",
       "d": "M90.903 147.222l-6.709-1.89-23.15-6.804s-1.962-.643-1.04-3.307c.729-2.108 2.173-1.795 2.173-1.795l24.953 6.757s4.134.857 4.638 2.54c.557 1.858-.865 4.499-.865 4.499",
       "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
+      "nutrition": {},
+      "recipes": ["Rôti", "Grillé/poêlé"],
+      "attributes": {
+        "lean": true
       }
     },
     {
@@ -239,8 +242,12 @@
       "nutrition": {
         "lipids": {
           "value": 2.5,
-          "text": []
+          "text": ["Cru : 2,5%", "Grillé : 2,5%"]
         }
+      },
+      "recipes": ["Grillé/poêlé", "Rôti"],
+      "attributes": {
+        "lean": true
       }
     },
     {
@@ -252,9 +259,11 @@
       "nutrition": {
         "lipids": {
           "value": 5.67,
-          "text": []
+          "text": ["Crue : 5,67%", "Grillée/poêlée : 6,94%"]
         }
-      }
+      },
+      "recipes": ["Grillée/poêlée"],
+      "attributes": {}
     },
     {
       "id": 21,
@@ -265,9 +274,11 @@
       "nutrition": {
         "lipids": {
           "value": 8.63,
-          "text": []
+          "text": ["Crue : 8,63%", "Grillée/poêlée : 9,76%"]
         }
-      }
+      },
+      "recipes": ["Grillée/poêlée"],
+      "attributes": {}
     },
     {
       "id": 22,
@@ -278,9 +289,11 @@
       "nutrition": {
         "lipids": {
           "value": 6.6,
-          "text": []
+          "text": ["Cru : 6,6%", "Grillé : 8,8%"]
         }
-      }
+      },
+      "recipes": ["Grillé/poêlé"],
+      "attributes": {}
     },
     {
       "id": 23,
@@ -288,12 +301,9 @@
       "description": "Description",
       "d": "M59.72 166.499s2.547-3.9 3.402-6.048c.336-.845.667-2.168.914-3.28l-6.82-3.713-9.024 15.167s2.744.581 4.11.897c1.359.314 4.064.993 4.064.993z",
       "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
-      }
+      "nutrition": {},
+      "recipes": ["Grillé/poêlé en steak", "Rôti (rond de tranche)"],
+      "attributes": {}
     },
     {
       "id": 24,
@@ -301,11 +311,10 @@
       "description": "Description",
       "d": "M57.216 153.458l-9.024 15.167 1.087-19.419z",
       "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
+      "nutrition": {},
+      "recipes": ["Grillée/poêlée en steak"],
+      "attributes": {
+        "marble": true
       }
     },
     {
@@ -317,9 +326,11 @@
       "nutrition": {
         "lipids": {
           "value": 7.05,
-          "text": []
+          "text": ["Crue : 7,05%", "Cuite : 1,9%"]
         }
-      }
+      },
+      "recipes": ["Plats mijotés", "Grillée/poêlée", "Rôtie"],
+      "attributes": {}
     },
     {
       "id": 26,
@@ -327,25 +338,26 @@
       "description": "Description",
       "d": "M61.043 138.528l9.031 2.654-3.74 9.394-1.89 4.583s-.603-6.05-1.511-8.93c-.928-2.942-3.906-8.287-3.906-8.287z",
       "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
+      "nutrition": {},
+      "recipes": ["Plats mijotés", "Grillée/poêlée en steak", "Rôtie"],
+      "attributes": {
+        "marble": true
       }
     },
     {
       "id": 27,
-      "name": "Tende de tranche: poire, merlan",
+      "name": "Tende de tranche, poire et merlan",
       "description": "Description",
       "d": "M59.027 137.942l-15.863-4.608-.358 12.565 6.473 3.307 7.937 4.252 6.82 3.714.409-2.013s-.604-6.05-1.512-8.93c-.928-2.942-3.906-8.287-3.906-8.287",
       "transform": "translate(-26.786 -106.472)",
       "nutrition": {
         "lipids": {
           "value": 2.34,
-          "text": []
+          "text": ["Cru : 2,34%", "Grillé/poêlé : 2,92%", "Rôti/cuit au four : 3,03%"]
         }
-      }
+      },
+      "recipes": ["Grillé/poêlé", "Rôti (tende de tranche et poire)"],
+      "attributes": {}
     },
     {
       "id": 28,
@@ -353,12 +365,9 @@
       "description": "Description",
       "d": "M41.908 168.483l.898-22.584.358-12.565-8.107-2.365s-2.597 15.897-1.04 23.623c1.02 5.055 6.615 13.985 6.615 13.985z",
       "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
-      }
+      "nutrition": {},
+      "recipes": ["Rôti", "Grillé/poêlé en steak"],
+      "attributes": {}
     },
     {
       "id": 29,
@@ -369,23 +378,20 @@
       "nutrition": {
         "lipids": {
           "value": 9.3,
-          "text": []
+          "text": ["Bouillie/cuite à l'eau : 9,3%"]
 
         }
+      },
+      "recipes": ["Plats mijotés"],
+      "attributes": {
+        "gelatin": true
       }
     },
     {
       "id": 30,
-      "name": "Name",
-      "description": "",
+      "name": "Bout de la queue",
       "d": "M31.671 161.832h2.54s.432 3.752 1.13 6.84c1.312 5.802-3.78 12.757-3.78 12.757s-2.52-5.944-.378-12.946c.878-2.87.488-6.651.488-6.651z",
-      "transform": "translate(-26.786 -106.472)",
-      "nutrition": {
-        "lipids": {
-          "value": null,
-          "text": []
-        }
-      }
+      "transform": "translate(-26.786 -106.472)"
     },
     {
       "id": 31,
@@ -419,9 +425,13 @@
       "transform": "translate(-26.786 -106.472)",
       "nutrition": {
         "lipids": {
-          "value": null,
-          "text": []
+          "value": 4.25,
+          "text": ["Cru : 4,25%", "Bouilli/cuit à l'eau : 4,1%"]
         }
+      },
+      "recipes": ["Plats mijotés"],
+      "attributes": {
+        "gelatin": true
       }
     }
   ]

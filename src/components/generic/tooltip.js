@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from "@emotion/styled";
 
 const Container = styled.div({
@@ -7,9 +8,9 @@ const Container = styled.div({
   cursor: "pointer",
 })
 
-const TooltipSpan = styled.span({
+const TooltipDiv = styled.div({
+  whiteSpace: "nowrap",
   opacity: 0,
-  width: 200,
   textAlign: "center",
   padding: "0 8px",
   borderRadius: 4,
@@ -17,7 +18,7 @@ const TooltipSpan = styled.span({
   zIndex: 1,
   top: "100%",
   left: "50%",
-  marginLeft: -100,
+  transform: "translateX(-50%)",
   transition: "opacity .4s",
   
   [`${Container}:hover &`]: {
@@ -34,7 +35,7 @@ const TooltipSpan = styled.span({
     borderStyle: "solid",
   },
 
-  '&>div': {
+  '&>div, &>hr': {
     margin: "8px 0",
   }
 }, props => ({
@@ -54,10 +55,16 @@ class Tooltip extends Component {
     return (
       <Container>
         {this.props.children}
-        <TooltipSpan
+        <TooltipDiv
           background={this.props.background}
           color={this.props.color}
         >
+          { this.props.title && 
+            <>
+              <div>{this.props.title}</div>
+              <hr />
+            </>
+          }
           {
             typeof this.props.text === "string"
             ? <div>{this.props.text}</div>
@@ -65,10 +72,25 @@ class Tooltip extends Component {
               <div>{t}</div>
             ))
           }
-        </TooltipSpan>
+        </TooltipDiv>
       </Container>
     );
   }
 }
+
+Tooltip.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]).isRequired,
+  background: PropTypes.string,
+  color: PropTypes.string,
+};
+
+Tooltip.defaultProps = {
+  background: "black",
+  color: "white",
+};
 
 export default Tooltip;

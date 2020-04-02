@@ -9,7 +9,7 @@ import { colors } from '../constants';
 const Container = styled.div({
   display: "flex",
   justifyContent: "center",
-  margin: 8,
+  margin: 16,
 });
 
 const Attributes = props => {
@@ -24,7 +24,7 @@ const Attributes = props => {
       }
       {props.attributes.marble &&
         <Badge
-          text={"Persillé"}
+          text={"Persillé / Entrelardé"}
           color={colors.background}
           background={colors.partName.badge.marble}
         />

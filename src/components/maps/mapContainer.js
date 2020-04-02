@@ -19,7 +19,7 @@ const MapSubContainer = styled.div({
   overflowY: "hidden",
   direction: "rtl",
   [screen.mediaQuery.l]: {
-    height: "66.6%",
+    height: "60%",
   }
 })
 
@@ -27,7 +27,7 @@ const PartNameSubContainer = styled.div({
   height: "50%",
   boxSizing: "border-box",
   [screen.mediaQuery.l]: {
-    height: "33.3%",
+    height: "40%",
   }
 })
 
@@ -66,6 +66,7 @@ class MapContainer extends Component {
       <Container>
         <MapSubContainer>
           <Map
+            outline={this.props.outline}
             parts={this.props.parts}
             selected={this.getFocusedPieceId()}
             hovered={id => this.updateHoveredPiece(id)}

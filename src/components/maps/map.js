@@ -13,8 +13,19 @@ const Svg = styled.svg({
 })
 
 class Map extends Component {
+  constructor(props) {
+    super(props);
+    this.svgRef = React.createRef();
+  }
+
   updateHovered = (id, isHovered) => {
     this.props.hovered(isHovered ? id : null);
+  }
+
+  handleClickOnMap = (event) => {
+    if(event.target === this.svgRef.current) {
+      this.props.clicked(null);
+    }
   }
 
   render() { 
@@ -25,6 +36,8 @@ class Map extends Component {
         stroke={colors.map.stroke}
         strokeWidth={0.7}
         height="100%"
+        ref={this.svgRef}
+        onClick={this.handleClickOnMap}
         >
           {
             this.props.parts.map(p => ( p.description ?
@@ -44,6 +57,13 @@ class Map extends Component {
             />
             ))
           }
+          <path
+            d={this.props.outline}
+            strokeWidth={1}
+            fill="none"
+            strokeLinecap="butt"
+            strokeLinejoin="miter"
+          />
       </Svg>
     );
   }

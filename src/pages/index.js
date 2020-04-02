@@ -11,6 +11,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Boeuf" />
     <MapContainer
       parts={data.mapsJson.parts}
+      outline={data.mapsJson.d}
     />
   </Layout>
 )
@@ -20,6 +21,7 @@ export default IndexPage
 export const query = graphql`
 query MyQuery {
   mapsJson(country: {eq: "fr"}, map: {eq: "beef"}) {
+    d
     parts {
       d
       description
@@ -32,7 +34,12 @@ query MyQuery {
           value
         }
       }
-      recipes
+      cooking {
+        text
+        grilled
+        roasted
+        stewed
+      }
       attributes {
         gelatin
         marble

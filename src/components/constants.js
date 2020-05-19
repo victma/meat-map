@@ -1,3 +1,4 @@
+/*** Colors ***/
 const lightGrey = "#e7e1df";
 const lightGreen = "#e6ee9c";
 const logoGreen = "#abba20";
@@ -8,9 +9,13 @@ const darkBrown = "#393332";
 const white = "#faf9f9";
 
 const colors = {
-  header: lightGreen,
   text: darkBrown,
   background: white,
+  button: logoBlue,
+  header: {
+    background: lightGreen,
+    text: logoGreen,
+  },
   map: {
     stroke: deepRed,
     fill: lightBrown,
@@ -27,14 +32,22 @@ const colors = {
   },
 };
 
+/*** Font sizes ***/
 const fonts = {
-  base: "16px",
+  base: "18px",
+  header: "24px",
+  h1: {
+    s: "54px",
+    l: "72px",
+  },
+  button: "1.2rem",
   partName: {
     details: "1.2rem",
     nutrition: "1.2rem",
   }
-}
+};
 
+/*** Screeen sizes ***/
 const screenSizeL = 900;
 
 const screen = {
@@ -42,10 +55,18 @@ const screen = {
   mediaQuery: {
     l: `@media (min-width: ${screenSizeL}px)`,
   }
-}
+};
+
+/*** Animations ***/
+const animation = {
+  transition: {
+    default: "all 0.2s ease-out",
+  }
+};
 
 export {
   colors,
   fonts,
   screen,
+  animation,
 }

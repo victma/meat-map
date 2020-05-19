@@ -13,6 +13,10 @@ const FixedContainer = styled.div({
   boxSizing: "border-box",
   overflow: "hidden",
   position: "relative",
+  
+  p: {
+    textAlign: 'center',
+  },
 })
 
 const HelpMessage = styled.p({
@@ -43,6 +47,10 @@ const MovingContainer = styled.div({
   display: "flex",
   alignItems: "center",
   flexDirection: "column",
+
+  p: {
+    margin: 8,
+  },
 }, props => ({
   transform: props.show ? "translateY(0%)" : "translateY(100%)"
 }))

@@ -12,6 +12,7 @@ const Description = styled.div({
   padding: "8px 16px",
   margin: 0,
   textAlign: "center",
+  overflowY: 'scroll',
   background: colors.partName.background,
   [screen.mediaQuery.l]: {
     borderRadius: "8px 8px 0 0",

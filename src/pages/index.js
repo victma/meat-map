@@ -1,51 +1,34 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layouts/layout"
+import CenteredColumnLayout from "../components/layouts/centeredColumnLayout"
 import SEO from "../components/layouts/seo"
-
-import MapContainer from "../components/maps/mapContainer"
+import ButtonLink from "../components/generic/buttonLink"
+import ThumbnailButton from "../components/generic/thumbnailButton"
 
 const IndexPage = ({ data }) => (
-  <Layout>
-    <SEO title="Boeuf" />
-    <MapContainer
-      parts={data.mapsJson.parts}
-      outline={data.mapsJson.d}
-    />
-  </Layout>
+  <CenteredColumnLayout>
+    <SEO title="Acceuil" />
+    
+    <h1>La viande</h1>
+    <div>
+      <ThumbnailButton
+        viewBox={data.mapsJson.viewBox}
+        path={data.mapsJson.d}
+        to="beef"
+        text='Découpe du boeuf'
+      />
+    </div>
+  </CenteredColumnLayout>
 )
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
-query MyQuery {
+query {
   mapsJson(country: {eq: "fr"}, map: {eq: "beef"}) {
     d
-    parts {
-      d
-      description
-      id
-      name
-      transform
-      nutrition {
-        lipids {
-          text
-          value
-        }
-      }
-      cooking {
-        text
-        grilled
-        roasted
-        stewed
-      }
-      attributes {
-        gelatin
-        marble
-        lean
-      }
-    }
+    viewBox
   }
 }
-`   
+` 

@@ -5,12 +5,13 @@ import "typeface-roboto"
 import "typeface-montserrat"
 
 import Header from "./header"
-import { colors, fonts } from "../constants"
+import { colors, fonts, screen } from "../constants"
 
 const style = css`
   html, body, main, #___gatsby {
     margin: 0;
     height: 100%;
+    font-size: ${fonts.base};
   }
   
   #gatsby-focus-wrapper {
@@ -23,7 +24,6 @@ const style = css`
     font-family: "Roboto", sans-serif;
     color: ${colors.text};
     background-color: ${colors.background};
-    font-size: ${fonts.base};
   }
 
   main {
@@ -36,8 +36,19 @@ const style = css`
     margin: 0px;
   }
 
+  h1 {
+    font-size: ${fonts.h1.s};
+    margin-top: 32px;
+
+    ${screen.mediaQuery.l} {
+      font-size: ${fonts.h1.l};
+    }
+  }
+
   p {
-    margin: 8px;
+    margin: 8px 8px 32px;
+    text-align: justify;
+    line-height: 1.28rem;
   }
 
   a {

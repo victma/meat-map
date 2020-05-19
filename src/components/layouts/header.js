@@ -4,20 +4,17 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "@emotion/styled";
 
-import { colors, screen } from "../constants"
+import { colors, fonts } from "../constants"
 
 const Container = styled.header({
-  background: colors.header,
+  background: colors.header.background,
+  fontSize: fonts.header,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   
   '& > *': {
     margin: 8,
-  },
-
-  [screen.mediaQuery.l]: {
-    padding: 8,
   },
 })
 
@@ -31,7 +28,7 @@ const Header = ({ siteTitle, logo }) => {
       }
       file(relativePath: { eq: "images/logo.png" }) {
         childImageSharp {
-          fixed(height: 50) {
+          fixed(height: 60) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -45,9 +42,7 @@ const Header = ({ siteTitle, logo }) => {
         <Img fixed={data.file.childImageSharp.fixed} />
       </Link>
       <Link to="/">
-        <h1>
           {data.site.siteMetadata.title}
-        </h1>
       </Link>
     </Container>
   )

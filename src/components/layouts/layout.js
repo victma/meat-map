@@ -39,6 +39,8 @@ const style = css`
   h1 {
     font-size: ${fonts.h1.s};
     margin-top: 32px;
+    font-weight: ${fonts.h1.weight};
+    letter-spacing: ${fonts.h1.spacing};
 
     ${screen.mediaQuery.l} {
       font-size: ${fonts.h1.l};

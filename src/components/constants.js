@@ -37,8 +37,10 @@ const fonts = {
   base: "18px",
   header: "24px",
   h1: {
-    s: "54px",
-    l: "72px",
+    s: "3rem",
+    l: "5rem",
+    weight: 300,
+    spacing: "-0.05em",
   },
   button: "1.2rem",
   partName: {

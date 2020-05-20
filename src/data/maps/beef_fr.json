@@ -156,7 +156,7 @@
     {
       "id": 10,
       "name": "Macreuse à pot-au-feu",
-      "description": "Description",
+      "description": "La macreuse à pot-au-feu est située le long de l'humerus, face au jumeau à pot-au-feu.\nComme le jumeau à pot-au-feu, la macreuse à pot-au-feu est un morceau gélatineux qui doit cuire lentement (environ 2h / 1h à la coccotte minute). La viande proche du paleron est plus tendre, tandis que la partie basse est plus filandreuse.",
       "d": "M135.315 153.742l-11.055-.662s-.257 4.612-.567 6.898c-.34 2.51-1.418 7.465-1.418 7.465s2 2.704 2.835 4.158c.73 1.27 1.89 3.969 1.89 3.969l7.37.494s1.481-8.554 1.603-12.428c.105-3.325-.658-9.894-.658-9.894",
       "transform": "translate(-26.786 -106.472)",
       "nutrition": {},
@@ -166,7 +166,9 @@
         "roasted": false,
         "stewed": true
       },
-      "attributes": {}
+      "attributes": {
+        "gelatin": true
+      }
     },
     {
       "id": 11,

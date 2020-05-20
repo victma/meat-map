@@ -7,6 +7,7 @@ import { screen } from '../constants';
 const Column = styled.div({
   maxWidth: screen.l,
   margin: 'auto',
+  padding: 8,
 });
 
 const CenteredColumnLayout = ({ children }) => {

@@ -9,7 +9,6 @@ import { colors, screen } from "../constants";
 const Description = styled.div({
   flexGrow: 1,
   width: "100%",
-  padding: "8px 16px",
   margin: 0,
   textAlign: "center",
   overflowY: 'scroll',

@@ -29,7 +29,7 @@ const Header = ({ siteTitle, logo }) => {
       file(relativePath: { eq: "images/logo.png" }) {
         childImageSharp {
           fixed(height: 60) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_noBase64
           }
         }
       }

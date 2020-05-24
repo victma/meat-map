@@ -196,7 +196,8 @@
     {
       "id": 12,
       "name": "Côtes et entrecôtes",
-      "description": "Description",
+      "alternative_names": ["Entrecôtes couvertes"],
+      "description": "Les côtes et entrecôtes sont la partie centrale du train de côtes. Elles sont situées entre les 5ème et 11ème côtes (sur 13 paires). La partie charnue est issue d'un muscle dorsal situé le long des vertèbres et du début des côtes.\nL'entrecôte est bien issue du même muscle que la côte, contrairement à ce que son nom pourrait laisser penser. Il s'agit simplement d'une côte désossée et coupée en 2 ou 3 tranches dans l'épaisseur. On parle parfois d'entrecôtes couvertes, par opposition aux entrecôtes découvertes prises dans les basses-côtes.\nLes côtes, en particulier la 7ème, sont une partie prisée du boeuf. Elles sont consommées grillées ou poêlées à feu vif, puis cuites à cœur à feu doux ou au four. Les entrecôtes, plus fines, sont simplement grillées ou poêlées.",
       "d": "M119.157 139.851l-3.496-19.844s-5.634.58-9.166 1.134c-1.922.302-6.52 0-6.52 0s.89 5.846.945 10.773c.053 4.921-.85 14.74-.85 14.74l16.725-.944c.359-2.075 2.362-5.859 2.362-5.859",
       "transform": "translate(-26.786 -106.472)",
       "nutrition": {
@@ -218,7 +219,7 @@
     {
       "id": 13,
       "name": "Plat de côtes",
-      "description": "Description",
+      "description": "Le plat de côtes est constitué de l'extremité des 13 côtes. Comme pour les côtes et entrecôtes, on peut parler de plat de côtes découvert pour les 5 premières côtes, et de plat de côtes couvert pour les 8 suivantes. Le plat de côtes couvert est situé sous l'épaule.\nLa plat de côtes doit mijoter de 3 à 4 heures, ou 1h30 à 2 heures à la cocotte minute. Il peut également être cuit longuement au four (environ 3 heures également).",
       "d": "M116.795 145.71l-16.726.945-9.166.567.473 12.662 25.891-2.457a28.208 28.208 0 01-.472-11.717",
       "transform": "translate(-26.786 -106.472)",
       "nutrition": {
@@ -255,7 +256,8 @@
     {
       "id": 15,
       "name": "Faux-filet",
-      "description": "Description",
+      "alternative_names": ["Contre-filet"],
+      "description": "Le faux-filet est constituté de plusieurs muscles du dos et est situé le long de la colonne vertébrale.\nC'est le morceau le plus noble après le filet. Comme ce dernier, le faux-filet ce consomme grillé, poêlé ou en rôti. Il est plus ferme que le filet, mais il a également plus de goût.",
       "d": "M100.07 146.655l-9.167.567s1.422-2.641.865-4.499c-.504-1.683-4.638-2.54-4.638-2.54l-1.737-19.778 14.582.736s.89 5.846.945 10.773c.053 4.921-.85 14.74-.85 14.74",
       "transform": "translate(-26.786 -106.472)",
       "nutrition": {
@@ -325,7 +327,7 @@
     {
       "id": 19,
       "name": "Rumsteck",
-      "description": "Description",
+      "description": "Le rumsteck est situé au dessus de la cuisse. C'est un grand morceau du dos, allant de la queue jusqu'au faux-filet. Il est constitué de l'aiguillette de rumsteck, de la boule de rumsteck et du filet de rumsteck.\nC'est une vainde assez maigre qui se consomme grillée, poêlée ou en rôti. Le filet de rumsteck est particulièrement tendre.",
       "d": "M61.043 138.528l-25.986-7.56s2.086-5.97 4.253-8.126c2.186-2.176 8.22-4.252 8.22-4.252s4.754.702 16.726-.378c3.682-.332 21.137 2.193 21.137 2.193l1.737 19.778-24.953-6.757s-1.444-.313-2.173 1.795c-.922 2.664 1.04 3.307 1.04 3.307",
       "transform": "translate(-26.786 -106.472)",
       "nutrition": {

@@ -7,7 +7,7 @@ import SEO from "../components/layouts/seo"
 import MapContainer from "../components/maps/mapContainer"
 
 const BeefMapPage = ({ data }) => (
-  <Layout>
+  <Layout fullHeight>
     <SEO title="Boeuf" />
     <MapContainer
       parts={data.mapsJson.parts}

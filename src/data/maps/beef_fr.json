@@ -295,7 +295,7 @@
     {
       "id": 17,
       "name": "Bavette de flanchet",
-      "description": "Description",
+      "description": "La bavette de flanchet est un muscle abominal situeé au niveau de l'aine.",
       "d": "M90.903 147.222l.473 12.662-19.75-1.984.945-3.78s4.42-1.59 6.71-3.496c1.849-1.541 4.913-5.292 4.913-5.292z",
       "transform": "translate(-26.786 -106.472)",
       "nutrition": {},
@@ -349,7 +349,7 @@
     {
       "id": 20,
       "name": "Bavette d'aloyau",
-      "description": "Description",
+      "description": "La bavette d'aloyau est un muscle abdominal. Elle a plus ou moins une forme de bavoir d'enfant, d'où son nom. Le terme aloyau quant à lui désigne la partie arrière du dos (faux-filet, filet, rumsteck et aiguillette).\nLa bavette d'aloyau se consomme simplement grillée ou poêlée.",
       "d": "M68.13 166.876l3.496-8.976.945-3.78s-2.683.628-4.063.803c-1.344.17-4.063.236-4.063.236s-.65 3.603-1.323 5.292c-.855 2.149-3.402 6.048-3.402 6.048s2.314-1.374 4.063-.662c1.38.562 4.347 1.04 4.347 1.04z",
       "transform": "translate(-26.786 -106.472)",
       "nutrition": {

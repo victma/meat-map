@@ -55,7 +55,8 @@ const MovingContainer = styled.div({
   transform: props.show ? "translateY(0%)" : "translateY(100%)"
 }))
 
-const Title = styled.h2({
+const Title = styled.h3({
+  fontSize: '1.5rem',
   display: "inline-block",
   boxSizing: "border-box",
   margin: 0,
@@ -64,7 +65,7 @@ const Title = styled.h2({
   background: colors.partName.background,
   borderRadius: "8px 8px 0 0",
   [screen.mediaQuery.l]: {
-    fontSize: 36,
+    fontSize: '2rem',
     width: "unset",
     margin: "0 32px",
     padding: "32px 64px 16px",

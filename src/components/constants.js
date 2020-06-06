@@ -1,33 +1,37 @@
 /*** Colors ***/
-const lightGrey = "#e7e1df";
-const lightGreen = "#e6ee9c";
-const logoGreen = "#abba20";
-const logoBlue = "#28aaff";
-const deepRed = "#b71c1c";
-const lightBrown = "#bcaaa4";
-const darkBrown = "#393332";
-const white = "#faf9f9";
+const hexa = {
+ lightGrey: "#e7e1df",
+ lightGreen: "#e6ee9c",
+ logoGreen: "#abba20",
+ logoBlue: "#28aaff",
+ deepRed: "#b71c1c",
+ lightBrown: "#bcaaa4",
+ darkBrown: "#393332",
+ white: "#faf9f9",
+ yellow: "#fdd835",
+};
 
 const colors = {
-  text: darkBrown,
-  background: white,
-  button: logoBlue,
+  ...hexa,
+  text: hexa.darkBrown,
+  background: hexa.white,
+  button: hexa.logoBlue,
   header: {
-    background: lightGreen,
-    text: logoGreen,
+    background: hexa.white,
+    text: hexa.logoGreen,
   },
   map: {
-    stroke: deepRed,
-    fill: lightBrown,
-    unedibleFill: lightGrey,
+    stroke: hexa.deepRed,
+    fill: hexa.lightBrown,
+    unedibleFill: hexa.lightGrey,
   },
   partName: {
-    text: darkBrown,
-    background: lightBrown,
+    text: hexa.darkBrown,
+    background: hexa.lightBrown,
     badge: {
       lean: "#689f38",
-      marble: deepRed,
-      gelatin: logoBlue,
+      marble: hexa.deepRed,
+      gelatin: hexa.logoBlue,
     },
   },
 };
@@ -42,6 +46,12 @@ const fonts = {
     weight: 300,
     spacing: "-0.05em",
   },
+  h2: {
+    s: "2rem",
+    l: "3rem",
+    weight: 300,
+    spacing: "-0.05em",
+  },
   button: "1.2rem",
   partName: {
     details: "1.2rem",
@@ -51,11 +61,14 @@ const fonts = {
 
 /*** Screeen sizes ***/
 const screenSizeL = 900;
+const screenSizeS = 500;
 
 const screen = {
   l: screenSizeL,
+  s: screenSizeS,
   mediaQuery: {
     l: `@media (min-width: ${screenSizeL}px)`,
+    s: `@media (min-width: ${screenSizeS}px)`,
   }
 };
 

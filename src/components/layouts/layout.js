@@ -59,6 +59,11 @@ const style = css`
     text-decoration: none;
     color: #393332;
   }
+
+  p>a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
 `
 
 const fullHeightStyle = css`

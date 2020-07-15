@@ -45,13 +45,14 @@ const Sun = styled.span({
   marginTop: -20,
 });
 
+/* eslint-disable jsx-a11y/accessible-emoji */
 const FooterComponent = () => {
   return (
     <Footer>
       <CenteredColumn>
         <p>Meat Map 2020</p>
         <p>
-          <Emoji role="img" aria-label="Computer emoji">⌨️</Emoji> with <Emoji role="img" aria-label="Cofee emoji">☕️</Emoji> by <a href="https://vict.ml" target="_blank">victma</a>
+          <Emoji role="img" aria-label="Computer emoji">⌨️</Emoji> with <Emoji role="img" aria-label="Cofee emoji">☕️</Emoji> by <a href="https://vict.ml" target="_blank" rel="noopener noreferrer">victma</a>
         </p>
         <Vilage>
           <Sun></Sun> <Emoji role="img" aria-label="House emoji">🏡</Emoji> <Emoji role="img" aria-label="House emoji">🏡</Emoji> <Emoji role="img" aria-label="Cow emoji">🐄</Emoji>

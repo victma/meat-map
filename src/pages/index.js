@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layouts/layout"
 import CenteredColumn from "../components/layouts/centeredColumn"
@@ -13,9 +13,33 @@ const IndexPage = ({ data }) => (
     
     <EarthMap />
     <CenteredColumn>
-      <h1>La nouriture vivante</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida mauris eget tellus ullamcorper fringilla. Aliquam erat volutpat. Cras sollicitudin turpis dolor, a ornare odio dignissim sit amet. Mauris suscipit massa at tortor mollis pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed tempor vulputate nunc at semper. Curabitur aliquam maximus orci, sed varius ipsum porta vulputate. Sed at euismod libero. In hac habitasse platea dictumst. Praesent gravida elit vitae scelerisque feugiat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida mauris eget tellus ullamcorper fringilla. Aliquam erat volutpat. Cras sollicitudin turpis dolor, a ornare odio dignissim sit amet. Mauris suscipit massa at tortor mollis pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed tempor vulputate nunc at semper. Curabitur aliquam maximus orci, sed varius ipsum porta vulputate. Sed at euismod libero. In hac habitasse platea dictumst. Praesent gravida elit vitae scelerisque feugiat.</p>
+      <h1>La nourriture vivante</h1>
+      <p>
+        Bien que je cuisine et mange du bœuf, j’ai réalisé il y a quelques années que je ne savais que très peu de choses à propos des
+        différentes pièces proposées à la vente. J’avais donc pour projet dans un coin de ma tête de remédier à cela. À la faveur d’un
+        pic de motivation, je me suis lancé dans des recherches puis dans la création de la première page de ce site
+        (<Link to="beef">la découpe du bœuf</Link>). J’ai passé de longues heures à rassembler et recouper les informations, puis à dessiner
+        et à décrire chaque pièce de boucherie.
+      </p>
+      <p>
+        Au cours de ce travail, ma vision sur l’importance du sujet a évolué. Je considérais initialement ces informations comme intéressantes
+        mais accessoires. Il me paraissait donc logique que seuls les professionnels et quelques cuisiniers passionnés connaissent	ces détails.
+      </p>
+      <p>
+        Je pense désormais au contraire que chaque consommateur, même le plus occasionnel	, devrait avoir ces connaissances sur la nature même
+        de ce qu’il consomme. Autrement dit, comment est-il possible que j’en sache si peu après des années à acheter de la viande et à en
+        commander dans les restaurants.
+      </p>
+      <p>
+        J’ai d’abord eu cette réflexion à propos de la viande de bœuf, mais il est évident qu’elle s’applique à tous les aliments. Qu’est-ce
+        que le poivre ? Que sont le thé, le fromage ou les œufs ? Sûrement pas uniquement des articles de supermarché.
+      </p>
+      <p>
+        J’ai donc décidé de ne pas m’arrêter au schéma des pièces de bœuf`, mais de créer ce site et d’y ajouter des pages au fur et à mesure.
+        Le but n’est pas d’être exhaustif, mais de créer des schémas clairs, interactifs et instructifs. Je crois que les sujets traités sur ce
+        site sont basiques (ou qu’ils devraient l’être en tout cas) sous la forme la plus simple possible.
+      </p>
+
     </CenteredColumn>
 
     <CenteredColumn>
@@ -25,7 +49,7 @@ const IndexPage = ({ data }) => (
           viewBox={data.mapsJson.viewBox}
           path={data.mapsJson.d}
           to="beef"
-          text='Découpe du boeuf'
+          text='Découpe du bœuf'
         />
       </div>
     </CenteredColumn>

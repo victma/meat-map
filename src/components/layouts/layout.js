@@ -83,13 +83,13 @@ const fullHeightStyle = css`
   }
 `
 
-const Layout = ({ children, fullHeight }) => (
+const Layout = ({ children, fullHeight, withFooter }) => (
   <>
     <Global styles={style} />
     { fullHeight && <Global styles={fullHeightStyle} /> }
     <Header />
     <main>{children}</main>
-    { !fullHeight && <Footer /> }
+    { (!fullHeight || withFooter) && <Footer /> }
   </>
 )
 

@@ -1,0 +1,116 @@
+{
+  "map": "fruits",
+  "country": "fr",
+  "parts": [
+    {
+      "name": "Abricot",
+      "start": 6,
+      "end": 8
+    },
+    {
+      "name": "Brugnon",
+      "start": 6,
+      "end": 8
+    },
+    {
+      "name": "Cassis",
+      "start": 6,
+      "end": 8
+    },
+    {
+      "name": "Cerise",
+      "start": 5,
+      "end": 7
+    },
+    {
+      "name": "Citron",
+      "start": 10,
+      "end": 4
+    },
+    {
+      "name": "Clémentine",
+      "start": 11,
+      "end": 2
+    },
+    {
+      "name": "Fraise",
+      "start": 5,
+      "end": 8
+    },
+    {
+      "name": "Framboise",
+      "start": 6,
+      "end": 8
+    },
+    {
+      "name": "Groseille",
+      "start": 6,
+      "end": 8
+    },
+    {
+      "name": "Kaki",
+      "start": 10,
+      "end": 1
+    },
+    {
+      "name": "Kiwi",
+      "start": 1,
+      "end": 3
+    },
+    {
+      "name": "Mandarine",
+      "start": 11,
+      "end": 2
+    },
+    {
+      "name": "Melon",
+      "start": 6,
+      "end": 9
+    },
+    {
+      "name": "Orange",
+      "start": 11,
+      "end": 3
+    },
+    {
+      "name": "Pamplemousse",
+      "start": 1,
+      "end": 6
+    },
+    {
+      "name": "Pastèque",
+      "start": 6,
+      "end": 9
+    },
+    {
+      "name": "Pêche",
+      "start": 6,
+      "end": 9
+    },
+    {
+      "name": "Poire",
+      "start": 1,
+      "end": 4
+    },
+    {
+      "name": "Pomme",
+      "start": 1,
+      "end": 4
+    },
+    {
+      "name": "Prune",
+      "start": 6,
+      "end": 9
+    },
+    {
+      "name": "Rhubarbe",
+      "start": 5,
+      "end": 7
+    },
+    {
+      "name": "Tomate",
+      "start": 5,
+      "end": 10
+    }
+  ]
+}

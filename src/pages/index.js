@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => (
         que le poivre ? Que sont le thé, le fromage ou les œufs ? Sûrement pas uniquement des articles de supermarché.
       </p>
       <p>
-        J’ai donc décidé de ne pas m’arrêter au schéma des pièces de bœuf`, mais de créer ce site et d’y ajouter des pages au fur et à mesure.
+        J’ai donc décidé de ne pas m’arrêter au schéma des pièces de bœuf, mais de créer ce site et d’y ajouter des pages au fur et à mesure.
         Le but n’est pas d’être exhaustif, mais de créer des schémas clairs, interactifs et instructifs. Je crois que les sujets traités sur ce
         site sont basiques (ou qu’ils devraient l’être en tout cas) sous la forme la plus simple possible.
       </p>
@@ -50,6 +50,13 @@ const IndexPage = ({ data }) => (
           path={data.mapsJson.d}
           to="beef"
           text='Découpe du bœuf'
+        />
+      </div>
+      <h1>Les fruits</h1>
+      <div>
+        <ThumbnailButton
+          to="fruits"
+          text='Fruits de saison'
         />
       </div>
     </CenteredColumn>

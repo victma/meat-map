@@ -19,33 +19,33 @@ const BeefMapPage = ({ data }) => (
 export default BeefMapPage
 
 export const query = graphql`
-query MyQuery {
-  mapsJson(country: {eq: "fr"}, map: {eq: "beef"}) {
-    d
-    parts {
+  {
+    mapsJson(country: {eq: "fr"}, map: {eq: "beef"}) {
       d
-      description
-      id
-      name
-      transform
-      nutrition {
-        lipids {
-          text
-          value
+      parts {
+        d
+        description
+        id
+        name
+        transform
+        nutrition {
+          lipids {
+            text
+            value
+          }
         }
-      }
-      cooking {
-        text
-        grilled
-        roasted
-        stewed
-      }
-      attributes {
-        gelatin
-        marble
-        lean
+        cooking {
+          text
+          grilled
+          roasted
+          stewed
+        }
+        attributes {
+          gelatin
+          marble
+          lean
+        }
       }
     }
   }
-}
-`   
+`

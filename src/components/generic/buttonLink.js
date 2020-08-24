@@ -2,20 +2,21 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import { colors, fonts } from '../constants';
+import styled from '@emotion/styled';
 
-const style = {
+const Button = styled(Link)({
   backgroundColor: colors.button,
   color: colors.background,
   fontSize: fonts.button,
   borderRadius: 8,
   padding: '16px 32px',
   display: 'inline-block',
-}
+});
 
 const ButtonLink = (props) => (
-  <Link css={style} {...props}>
+  <Button {...props}>
     {props.children}
-  </Link>
+  </Button>
 );
 
 export default ButtonLink;

@@ -61,7 +61,9 @@
         "stewed": true
       },
       "recipes": ["Boeuf bourguignon"],
-      "attributes": {}
+      "attributes": {
+        "marble": true
+      }
     },
     {
       "id": 5,
@@ -295,7 +297,7 @@
     {
       "id": 17,
       "name": "Bavette de flanchet",
-      "description": "La bavette de flanchet est un muscle abominal situeé au niveau de l'aine.",
+      "description": "La bavette de flanchet est un muscle abominal situé au niveau de l'aine.\nElle se consomme grillée ou poêlée.",
       "d": "M90.903 147.222l.473 12.662-19.75-1.984.945-3.78s4.42-1.59 6.71-3.496c1.849-1.541 4.913-5.292 4.913-5.292z",
       "transform": "translate(-26.786 -106.472)",
       "nutrition": {},
@@ -327,7 +329,7 @@
     {
       "id": 19,
       "name": "Rumsteck",
-      "description": "Le rumsteck est situé au dessus de la cuisse. C'est un grand morceau du dos, allant de la queue jusqu'au faux-filet. Il est constitué de l'aiguillette de rumsteck, de la boule de rumsteck et du filet de rumsteck.\nC'est une vainde assez maigre qui se consomme grillée, poêlée ou en rôti. Le filet de rumsteck est particulièrement tendre.",
+      "description": "Le rumsteck est situé au dessus de la cuisse. C'est un grand morceau du dos, allant de la queue jusqu'au faux-filet. Il est constitué de l'aiguillette de rumsteck, de la boule de rumsteck et du filet de rumsteck.\nC'est une viande assez maigre qui se consomme grillée, poêlée ou en rôti. Le filet de rumsteck est particulièrement tendre.",
       "d": "M61.043 138.528l-25.986-7.56s2.086-5.97 4.253-8.126c2.186-2.176 8.22-4.252 8.22-4.252s4.754.702 16.726-.378c3.682-.332 21.137 2.193 21.137 2.193l1.737 19.778-24.953-6.757s-1.444-.313-2.173 1.795c-.922 2.664 1.04 3.307 1.04 3.307",
       "transform": "translate(-26.786 -106.472)",
       "nutrition": {

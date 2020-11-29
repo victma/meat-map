@@ -36,8 +36,7 @@ const IndexPage = ({ data }) => (
       </p>
       <p>
         J’ai donc décidé de ne pas m’arrêter au schéma des pièces de bœuf, mais de créer ce site et d’y ajouter des pages au fur et à mesure.
-        Le but n’est pas d’être exhaustif, mais de créer des schémas clairs, interactifs et instructifs. Je crois que les sujets traités sur ce
-        site sont basiques (ou qu’ils devraient l’être en tout cas) sous la forme la plus simple possible.
+        Le but n’est pas d’être exhaustif, mais de créer des schémas clairs, interactifs et instructifs.
       </p>
 
     </CenteredColumn>
@@ -55,6 +54,7 @@ const IndexPage = ({ data }) => (
       <h1>Les fruits</h1>
       <div>
         <ThumbnailButton
+          img={data.file.childImageSharp.fixed}
           to="fruits"
           text='Fruits de saison'
         />
@@ -70,6 +70,14 @@ query {
   mapsJson(country: {eq: "fr"}, map: {eq: "beef"}) {
     d
     viewBox
+  }
+
+  file(relativePath: {eq: "images/fruits/fraise-thumbnail.jpg"}) {
+    childImageSharp {
+      fixed(height: 200, width: 300) {
+        ...GatsbyImageSharpFixed
+      }
+    }
   }
 }
 ` 

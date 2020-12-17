@@ -7,6 +7,12 @@ const month = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet",
 const currentMonth = (new Date()).getMonth();
 
 const Container = styled.div({
+  height: '100%',
+  width: '100%',
+  overflow: 'scroll',
+});
+
+const CalendarContainer = styled.div({
   margin: 16,
   display: 'grid',
   gridAutoColumns: 'minmax(100px, 1fr)',
@@ -14,9 +20,10 @@ const Container = styled.div({
   columnGap: 8,
 })
 
-const MonthContainer= styled(Container)({
+const MonthContainer= styled(CalendarContainer)({
   position: 'sticky',
-  top: 8,
+  top: 0,
+  marginTop: 0,
   zIndex: 2
 });
 
@@ -83,31 +90,33 @@ class Calendar extends Component {
   }
 
   render() {
-    return (<>
-      <MonthContainer>
-        {month.map((m, i) => (
-          <Month
-            key={i}
-            column={i + 1}
-            highlighted={this.monthShouldBeHighLighted(i)}
-            onMouseEnter={() => this.onHoverMonth(i, true)}
-            onMouseLeave={() => this.onHoverMonth(i, false)}
-          >{m}</Month>
-          ))}
-      </MonthContainer>
+    return (
       <Container>
-        {this.props.parts.map((part, i) => (
-          <CalendarLine 
-            {...part}
-            key={i}
-            row={2 + i}
-            highlighted={this.partShouldBeHighlighted(i)}
-            onHover={hoverIn => this.onHoverPart(i, hoverIn)}
-            background={this.props.images.find(i => (i.name === part.name.toLowerCase().replace(/é|è|ê/, 'e')))}
-          />
-          ))}
+        <MonthContainer>
+          {month.map((m, i) => (
+            <Month
+              key={i}
+              column={i + 1}
+              highlighted={this.monthShouldBeHighLighted(i)}
+              onMouseEnter={() => this.onHoverMonth(i, true)}
+              onMouseLeave={() => this.onHoverMonth(i, false)}
+            >{m}</Month>
+            ))}
+        </MonthContainer>
+        <CalendarContainer>
+          {this.props.parts.map((part, i) => (
+            <CalendarLine
+              {...part}
+              key={i}
+              row={2 + i}
+              highlighted={this.partShouldBeHighlighted(i)}
+              onHover={hoverIn => this.onHoverPart(i, hoverIn)}
+              background={this.props.images.find(i => (i.name === part.name.toLowerCase().replace(/é|è|ê/, 'e')))}
+            />
+            ))}
+        </CalendarContainer>
       </Container>
-    </>);
+    );
   }
 }
 

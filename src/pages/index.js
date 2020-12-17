@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => (
       </p>
       <p>
         Je pense désormais au contraire que chaque consommateur, même le plus occasionnel	, devrait avoir ces connaissances sur la nature même
-        de ce qu’il consomme. Autrement dit, comment est-il possible que j’en sache si peu après des années à acheter de la viande et à en
+        de ce qu’il consomme. Comment est-il possible que j’en sache si peu après des années à acheter de la viande et à en
         commander dans les restaurants.
       </p>
       <p>

@@ -101,19 +101,19 @@ class Calendar extends Component {
               onMouseEnter={() => this.onHoverMonth(i, true)}
               onMouseLeave={() => this.onHoverMonth(i, false)}
             >{m}</Month>
-            ))}
+          ))}
         </MonthContainer>
         <CalendarContainer>
           {this.props.parts.map((part, i) => (
             <CalendarLine
               {...part}
-              key={i}
+              key={part.name}
               row={2 + i}
               highlighted={this.partShouldBeHighlighted(i)}
               onHover={hoverIn => this.onHoverPart(i, hoverIn)}
               background={this.props.images.find(i => (i.name === part.name.toLowerCase().replace(/é|è|ê/, 'e')))}
             />
-            ))}
+          ))}
         </CalendarContainer>
       </Container>
     );

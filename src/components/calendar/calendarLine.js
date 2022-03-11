@@ -62,24 +62,36 @@ function CalendarLinePart(props) {
 }
 
 function CalendarLine(props) {
-  if (props.start <= props.end) {
-    return (
-      <CalendarLinePart {...props} />
-    );
-  }
+  return props.period.map((monthRange, i) => {
+    const start = monthRange[0];
+    const end = monthRange[1];
 
-  return <>
-    <CalendarLinePart
-      {...props}
-      start={props.start}
-      end={12}
-    />
-    <CalendarLinePart
-      {...props}
-      start={1}
-      end={props.end}
-    />
-  </>
+    if (start <= end) {
+      return (
+        <CalendarLinePart
+          {...props}
+          start={start}
+          end={end}
+          key={i}
+        />
+      );
+    }
+      
+    return <>
+      <CalendarLinePart
+        {...props}s
+        start={start}
+        end={12}
+        key={i}
+      />
+      <CalendarLinePart
+        {...props}
+        start={1}
+        end={end}
+        key={-i-1}
+      />
+    </>
+  });
 }
 
 export default CalendarLine;

@@ -19,8 +19,7 @@ export const query = graphql`
     mapsJson(map: {eq: "fruits"}, country: {eq: "fr"}) {
       parts {
         name
-        start
-        end
+        period
       }
     }
     allFile(filter: {relativePath: {regex: "/^images/fruits/[a-z]+.jpg$/"}}) {
